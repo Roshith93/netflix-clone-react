@@ -13,3 +13,10 @@ width: 100%;
  flex-direction: column
 }
 `
+
+export const Container = styled.div``
+
+export const Title = styled.h2``
+export const SubTitle = styled.h4``
+export const Pane = styled.h2``
+export const Image = styled.img``
