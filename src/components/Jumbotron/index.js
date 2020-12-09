@@ -1,6 +1,10 @@
-import { Inner, Container, Title, SubTitle, Pane, Image } from './styles/jumbotron'
+import { Inner, Container, Title, SubTitle, Pane, Image, Item } from './styles/jumbotron'
 
-export const Jumbotron = ({ direction = 'row', children, ...restProps }) => <Inner direction={direction}>{children}</Inner>
+export const Jumbotron = ({ direction = 'row', children, ...restProps }) => <Item direction={direction}>
+ <Inner>
+  {children}
+ </Inner>
+</Item>
 
 const JumbotronContainer = ({ children, ...restProps }) => {
  return <Container {...restProps}>{children}</Container>
@@ -14,8 +18,8 @@ const JumbotronSubTitle = ({ children, ...restProps }) => {
 const JumbotronPane = ({ children, ...restProps }) => {
  return <Pane {...restProps}>{children}</Pane>
 }
-const JumbotronImage = ({ children, ...restProps }) => {
- return <Image {...restProps}>{children}</Image>
+const JumbotronImage = ({ ...restProps }) => {
+ return <Image {...restProps} />
 }
 Jumbotron.Container = JumbotronContainer
 Jumbotron.Title = JumbotronTitle
