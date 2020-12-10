@@ -1,9 +1,9 @@
-import { JumbotronContainer } from './containers'
-import { FooterContainer } from './containers'
+import { JumbotronContainer, FaqsContainer, FooterContainer } from './containers'
 
 const App = () => (
   <>
     <JumbotronContainer />
+    <FaqsContainer/>
     <FooterContainer />
   </>
 )
