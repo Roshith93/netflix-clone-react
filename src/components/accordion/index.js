@@ -41,7 +41,6 @@ const AccordionHeader = ({ children, ...restProps }) => {
       {...restProps}
       onClick={() => setToggleShow(!toggleShow)}
     >
-     <pre>{JSON.stringify(toggleShow, null, 2)}</pre>
       {children}
       {toggleShow ? (
         <img src='/images/icons/close-slim.png' alt='close' />

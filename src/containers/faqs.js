@@ -1,11 +1,10 @@
 import {faqs} from '../fixtures/faqs'
-import {Accordion} from '../components'
+import {Accordion, OptForm} from '../components'
 
 export const FaqsContainer = () => {
  return (
   <Accordion>
    <Accordion.Title>Frequently Asked Questions</Accordion.Title>
-   <Accordion.Frame>
     
    {faqs.map(faq => (
     <Accordion.Item key={faq.id}>
@@ -13,7 +12,11 @@ export const FaqsContainer = () => {
      <Accordion.Body>{faq.body}</Accordion.Body>
     </Accordion.Item>
    ))}
-   </Accordion.Frame>
+   <OptForm>
+    <OptForm.Input placeholder="Email Address"/>
+    <OptForm.Button>Try it now</OptForm.Button>
+    <OptForm.Text>Ready to watch? Enter your Email </OptForm.Text>
+   </OptForm>
   </Accordion>
  )
 }
