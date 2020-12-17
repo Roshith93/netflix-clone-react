@@ -35,6 +35,9 @@ const FormInput = ({ children, ...restProps }) => {
 const FormSubmit = ({ children, ...restProps }) => {
   return <Submit {...restProps}>{children}</Submit>
 }
+const FormTextSmall = ({ children, ...restProps }) => {
+  return <Submit {...restProps}>{children}</Submit>
+}
 Form.Error = FormError
 Form.Title = FormTitle
 Form.Text = FormText
@@ -42,3 +45,4 @@ Form.Base = FormBase
 Form.Link = FormLink
 Form.Input = FormInput
 Form.Submit = FormSubmit
+Form.TextSmall = FormTextSmall
