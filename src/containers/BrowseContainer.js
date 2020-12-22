@@ -8,6 +8,7 @@ import logo from '../netflix_logo.svg'
 export const BrowseContainer = ({ slides }) => {
   const [profile, setProfile] = useState({})
   const [loading, setLoading] = useState(true)
+  const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('series');
   const { firebase } = useContext(FirebaseContext)
   const user = firebase.auth().currentUser || {}
@@ -32,6 +33,7 @@ export const BrowseContainer = ({ slides }) => {
             </Header.TextLink>
           </Header.Group>
           <Header.Group>
+            <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             <Header.Profile>
               <Header.Picture src={user.photoURL} />
               <Header.Dropdown>

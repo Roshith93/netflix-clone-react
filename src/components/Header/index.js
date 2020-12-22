@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import { Link as ReachRouterLink } from 'react-router-dom'
 import {
   Background,
@@ -66,6 +67,26 @@ const HeaderPicture = ({ src, ...restProps }) => {
   return <Picture {...restProps} src={`/images/users/${src}.png`} />
 }
 
+const HeaderSearch = ({ searchTerm, setSearchTerm, ...restProps }) => {
+  const [searchActive, setSearchActive] = useState(false);
+
+  return (
+    <Search {...restProps}>
+      <SearchIcon onClick={() => setSearchActive((searchActive) => !searchActive)} data-testid="search-click">
+        <img src="/images/icons/search.png" alt="Search" />
+      </SearchIcon>
+      <SearchInput
+        value={searchTerm}
+        onChange={({ target }) => setSearchTerm(target.value)}
+        placeholder="Search films and series"
+        active={searchActive}
+        data-testid="search-input"
+      />
+    </Search>
+  );
+}
+
+
 Header.Logo = HeaderLogo
 Header.ButtonLink = HeaderButtonLink
 Header.Feature = HeaderFeature
@@ -77,3 +98,4 @@ Header.Profile = HeaderProfile
 Header.Dropdown = HeaderDropdown
 Header.PlayButton = HeaderPlayButton
 Header.Picture = HeaderPicture
+Header.Search = HeaderSearch
