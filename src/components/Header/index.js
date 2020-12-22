@@ -35,7 +35,18 @@ const HeaderLogo = ({ to, ...restProps }) => {
     </ReachRouterLink>
   )
 }
-
+const HeaderFeature= ({ children, ...restProps }) => {
+  return <Feature {...restProps}>{children}</Feature>
+}
+const HeaderText= ({ children, ...restProps }) => {
+  return <Text {...restProps}>{children}</Text>
+}
+const HeaderFeatureCallOut= ({ children, ...restProps }) => {
+  return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>
+}
 Header.Container = HeaderFrame
 Header.Logo = HeaderLogo
 Header.ButtonLink = HeaderButtonLink
+Header.Feature = HeaderFeature
+Header.Text = HeaderText
+Header.FeatureCallOut = HeaderFeatureCallOut
