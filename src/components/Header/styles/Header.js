@@ -207,7 +207,7 @@ export const PlayButton = styled.button`
   padding: 10px 20px;
   border-radius: 5px;
   max-width: 130px;
-   ont-weight: bold;
+  font-weight: bold;
   font-size: 20px;
   margin-top: 10px;
   cursor: pointer;
